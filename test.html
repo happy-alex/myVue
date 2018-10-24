@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script src="./index.js"></script>
+    </head>
+    <body>
+        <p>
+
+        </p>
+        <button onclick="onC">111</button>
+        <script>
+            function onC() {
+                console.log(111)
+            }
+            var data = {
+                a: 1
+            };
+            Object.defineProperty(data, 'name', {
+                enumerable: true,
+                configurable: true,
+                get: function() {
+                    console.log('正在读取值', this.value);
+                },
+                set: function(newVal) {
+                    console.log('正在设置值', this)
+                    this.value = newVal;
+                }
+            });    
+        </script>
+    </body>
+</html>
